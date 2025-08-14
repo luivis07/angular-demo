@@ -1,0 +1,28 @@
+<div class="gauge">
+  <svg viewBox="0 0 100 50">
+    <!-- Gradient Definition -->
+    <defs>
+      <linearGradient id="gaugeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#ccc" />       <!-- Start grey -->
+        <stop offset="100%" stop-color="orange" />   <!-- End orange -->
+      </linearGradient>
+    </defs>
+
+    <!-- Background arc -->
+    <path class="bg"
+          d="M 10 50 A 40 40 0 0 1 90 50"
+          stroke="#ccc"
+          stroke-width="8"
+          fill="none"/>
+
+    <!-- Foreground arc (progress) -->
+    <path class="progress"
+          d="M 10 50 A 40 40 0 0 1 90 50"
+          stroke="url(#gaugeGradient)"
+          stroke-width="8"
+          fill="none"
+          stroke-dasharray="126"
+          [attr.stroke-dashoffset]="126 - (126 * percentage / 100)"/>
+  </svg>
+  <div class="value">{{ percentage }}%</div>
+</div>

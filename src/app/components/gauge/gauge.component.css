@@ -1,0 +1,16 @@
+.gauge {
+  position: relative;
+  width: 200px;
+  margin: 0 auto;
+}
+.value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: bold;
+}
+.progress {
+  transition: stroke-dashoffset 0.4s ease;
+}

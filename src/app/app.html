@@ -1,0 +1,24 @@
+<div class="container toolkit-page py-4">
+  <h1 class="mb-4">Toolkit Demo</h1>
+
+  <!-- Gauge Demo -->
+  <section class="toolkit-section mb-5">
+    <h2 class="section-title">Gauge Component</h2>
+    <p class="text-muted mb-3">Adjust the percentage using the slider below.</p>
+
+    <app-gauge [percentage]="gaugeValue"></app-gauge>
+
+    <!-- Slider control -->
+    <div class="mt-4">
+      <label for="gaugeSlider" class="form-label">Set Gauge Percentage: {{ gaugeValue }}%</label>
+      <input id="gaugeSlider" type="range" min="0" max="100" [(ngModel)]="gaugeValue" class="form-range" />
+    </div>
+  </section>
+
+  <!-- Drag-and-Drop Demo -->
+  <section class="toolkit-section">
+    <h2 class="section-title">Drag and Drop Component</h2>
+    <p class="text-muted mb-3">Reorder the items by dragging and dropping them.</p>
+    <app-draganddrop></app-draganddrop>
+  </section>
+</div>
